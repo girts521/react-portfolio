@@ -26,24 +26,24 @@ const HeaderParticles = () => {
               mode: "push",
             },
             onHover: {
-              enable: false,
-              mode: "repulse",
+              enable: true,
+              mode: "bubble",
             },
             resize: true,
           },
           modes: {
             bubble: {
-              distance: 400,
-              duration: 2,
+              distance: 100,
+              duration: 5,
               opacity: 0.8,
-              size: 40,
+              size: 2,
             },
             push: {
               quantity: 20,
             },
             repulse: {
-              distance: 200,
-              duration: 0.4,
+              distance: 20,
+              duration: 1,
             },
           },
         },
@@ -70,7 +70,7 @@ const HeaderParticles = () => {
               enable: true,
               area: 800,
             },
-            value: 400,
+            value: 1200,
           },
           opacity: {
             value: 0.5,
@@ -80,7 +80,7 @@ const HeaderParticles = () => {
           },
           size: {
             random: true,
-            value: 1
+            value: 0.5
           },
         },
         detectRetina: true,
