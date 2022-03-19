@@ -3,27 +3,19 @@ import Particles from "react-tsparticles";
 import styles from './particles.module.css'
 
 const HeaderParticles = () => {
-//   const particlesInit = (main:any) => {
-//     console.log(main);
 
-//   };
-
-//   const particlesLoaded = (container:any) => {
-//     console.log(container);
-//   };
   return (
       
     <Particles  className={styles.tsparticles}
       id="tsparticles"
-    //   init={particlesInit}
-    //   loaded={particlesLoaded}
+
       height={'100vh'}
       width={'100%'}
       options={{
         fullScreen: false,
         background: {
           color: {
-            value: "#4cc9f0",
+            value: "#02010a",
           },
         },
         fpsLimit: 60,
@@ -57,7 +49,7 @@ const HeaderParticles = () => {
         },
         particles: {
           color: {
-            value: ["#023e8a","#0077b6", "#0077b6", "#0096c7", "#00b4d8", "#90e0ef", "#ade8f4", "#caf0f8"]
+            value: '#a9d6e5'
           },
           links: {
             enable: false
@@ -78,17 +70,17 @@ const HeaderParticles = () => {
               enable: true,
               area: 800,
             },
-            value: 30,
+            value: 400,
           },
           opacity: {
-            value: 0.3,
+            value: 0.5,
           },
           shape: {
-            type: "circle",
+            type: "star",
           },
           size: {
             random: true,
-            value: 100
+            value: 1
           },
         },
         detectRetina: true,
