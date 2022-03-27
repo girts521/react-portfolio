@@ -21,6 +21,7 @@
     width: 50px;
     background-color: #02010a;
     color: #a9d6e5;
+    cursor: pointer;
 }
 
 @media(min-width: 768px){
