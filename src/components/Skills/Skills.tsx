@@ -17,12 +17,12 @@ const Skills = () => {
               easing: "easeIn",
             },
             {
-              startValue: -300,
+              startValue: -100,
               endValue: 0,
               property: "translateY",
             },
             {
-              startValue: 100,
+              startValue: 10,
               endValue: 0,
               property: "blur",
             },
