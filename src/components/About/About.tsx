@@ -19,12 +19,7 @@ const About: React.FC = () => {
           startValue: -100,
           endValue: 0,
           property: "translateY",
-        },
-        {
-          startValue: 10,
-          endValue: 0,
-          property: "blur",
-        },
+        }
       ],
     },
     {
