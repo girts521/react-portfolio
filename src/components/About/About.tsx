@@ -3,9 +3,17 @@ import styles from "./about.module.css";
 import Plx from "react-plx";
 
 const About: React.FC = () => {
+
+  let fadeOut: number = 900;
+  let fadeIn: number | string = 'self';
+
+  if(window.innerWidth === 820) {
+    fadeOut = 1200
+  }
+
   const parallaxData = [
     {
-      start: 100,
+      start: fadeIn,
       duration: 300,
       animateWhenNotInViewport: false,
       properties: [
@@ -16,14 +24,19 @@ const About: React.FC = () => {
           easing: "easeIn",
         },
         {
-          startValue: -100,
+          startValue: -200,
           endValue: 0,
           property: "translateY",
+        },
+        {
+          startValue: 0,
+          endValue: 1,
+          property: "opacity",
         }
       ],
     },
     {
-      start: 900,
+      start: fadeOut,
       duration: 300,
       animateWhenNotInViewport: true,
       properties: [
@@ -39,10 +52,10 @@ const About: React.FC = () => {
           property: "translateY",
         },
         {
-          startValue: 0,
-          endValue: 100,
-          property: "blur",
-        },
+          startValue: 1,
+          endValue: 0,
+          property: "opacity",
+        }
       ],
     },
   ];
