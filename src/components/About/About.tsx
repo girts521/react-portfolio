@@ -4,17 +4,10 @@ import Plx from "react-plx";
 
 const About: React.FC = () => {
 
-  let fadeOut: number = 900;
-  let fadeIn: number | string = 'self';
-
-  if(window.innerWidth === 820) {
-    fadeOut = 1200
-  }
-
   const parallaxData = [
     {
-      start: fadeIn,
-      duration: 300,
+      start: 'self',
+      duration: 500,
       animateWhenNotInViewport: false,
       properties: [
         {
@@ -24,7 +17,7 @@ const About: React.FC = () => {
           easing: "easeIn",
         },
         {
-          startValue: -200,
+          startValue: 200,
           endValue: 0,
           property: "translateY",
         },
@@ -36,8 +29,9 @@ const About: React.FC = () => {
       ],
     },
     {
-      start: fadeOut,
-      duration: 300,
+      start: 'self',
+      startOffset: '30%',
+      duration: 500,
       animateWhenNotInViewport: true,
       properties: [
         {

@@ -1,10 +1,20 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight, faAngleLeft } from "@fortawesome/free-solid-svg-icons";
+import Plx from "react-plx";
 import styles from "./Projects.module.css";
 
+interface ProjectProps {
+  title: string;
+  tech: string[];
+  github: string;
+  website: string;
+  images: string[];
+  text: string;
+}
+
 //react component for Projects
-const Projects: React.FC = () => {
+const Projects: React.FC<{project:ProjectProps}> = (props) => {
   //state for imageIndex
   const [imageIndex, setImageIndex] = useState(0);
 
@@ -29,41 +39,87 @@ const Projects: React.FC = () => {
     }
   }
 
+  const parallaxData = [
+    {
+      start: 'self',
+      duration: 500,
+      animateWhenNotInViewport: false,
+      properties: [
+        {
+          startValue: 70,
+          endValue: 0,
+          property: "translateX",
+          easing: "easeIn",
+        },
+        {
+          startValue: 200,
+          endValue: 0,
+          property: "translateY",
+        },
+        {
+          startValue: 0,
+          endValue: 1,
+          property: "opacity",
+        }
+      ],
+    },
+    {
+      start: 'self',
+      startOffset: '15%',
+      duration: 500,
+      animateWhenNotInViewport: true,
+      properties: [
+        {
+          startValue: 0,
+          endValue: 70,
+          property: "translateX",
+          easing: "easeIn",
+        },
+        {
+          startValue: 0,
+          endValue: -300,
+          property: "translateY",
+        },
+        {
+          startValue: 1,
+          endValue: 0,
+          property: "opacity",
+        }
+      ],
+    },
+  ];
+
+
   return (
     <div className={styles.container}>
-      <div className={styles.project}>
+      <Plx className={styles.project} parallaxData={parallaxData}>
         <div className={styles.img}>
           <div className={styles.arrows}>
            <div className={styles.left} onClick={prevImage} > <FontAwesomeIcon icon={faAngleLeft} /></div>
            <div className={styles.right} onClick={nextImage} > <FontAwesomeIcon icon={faAngleRight} /></div>
           </div>
-          <img src={images[imageIndex]} alt="" />
+          <img src={props.project.images[imageIndex]} alt="" />
         </div>
         <div className={styles.text}>
-          <h2>Todo List</h2>
+          <h2>{props.project.title}</h2>
           <p>
-            Yes, this is another todo app. The internet must be full of
-            different todo apps made by young learning developers. But in this
-            project I tried to include a bit more than any of those tutorial
-            based todo apps. <br /> <br />
-            The design is largely inspired by the Todoist app,
-            which is my favorite todo app: https://todoist.com/ I tried to
-            challenge myself and make this project as close to the todoist app
-            as possible. <br /> <br />
-            It still certainly lacks some functionality, but if I
-            could make my own todoist app then I would not be searching for a
-            junior position...
+            {props.project.text}
           </p>
           <p>
-           <span> Technologies used: React, Node, Express, MongoDB, Mongoose, CSS,
-            HTML </span>
+           <span> Technologies used: {props.project.tech.map((item) => {
+             if(item === props.project.tech[props.project.tech.length - 1]){
+             return item + " "
+             } else {
+              return item + ", "
+             }
+           })} </span>
             <br /><br />
-            <span><a target={'_blank'} href="https://github.com/girts521/react-todoApp">GitHub repo can be found here</a></span>
+            <span><a target={'_blank'} href={props.project.github}>GitHub repo can be found here</a></span>
             <br /><br />
-            <span><a target={'_blank'} href="https://todo.gkarcevskis.com/">Live website can be found here</a></span>
+            <span><a target={'_blank'} href={props.project.website}>Live website can be found here</a></span>
           </p>
         </div>
-      </div>
+        </Plx>
     </div>
   );
 };

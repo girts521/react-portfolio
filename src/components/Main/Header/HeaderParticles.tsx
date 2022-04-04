@@ -15,7 +15,8 @@ const HeaderParticles = () => {
         fullScreen: false,
         background: {
           color: {
-            value: "#02010a",
+            // value: "#02010a",
+            value: "#000814",
           },
         },
         fpsLimit: 60,

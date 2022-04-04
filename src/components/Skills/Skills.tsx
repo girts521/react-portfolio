@@ -3,38 +3,10 @@ import styles from "./skills.module.css";
 import Plx from "react-plx";
 
 const Skills = () => {
-  let fadeOut: number = 1000;
-  let fadeIn: number = 1000;
-
-  console.log(window.innerWidth);
-
-  if(window.innerWidth === 375) {
-    fadeIn = 700
-    fadeOut = 1300;
-  }
-  if(window.innerWidth === 390 || window.innerWidth === 414) {
-    fadeIn = 1000;
-    fadeOut = 1900
-  }
-  if(window.innerWidth === 768) {
-    fadeIn = 1200;
-    fadeOut = 1900
-  }
-  if(window.innerWidth === 820) {
-    fadeIn = 1500;
-    fadeOut = 2300
-  }
-  if(window.innerWidth >= 1024) {
-    fadeIn = 1800;
-    fadeOut = 2500
-  }
-
-
-  console.log(fadeIn)
 
     const parallaxData = [
         {
-          start: fadeIn,
+          start: 'self',
           duration: 500,
           animateWhenNotInViewport: false,
           properties: [
@@ -45,7 +17,7 @@ const Skills = () => {
               easing: "easeIn",
             },
             {
-              startValue: -500,
+              startValue: 200,
               endValue: 0,
               property: "translateY",
             },
@@ -57,7 +29,8 @@ const Skills = () => {
           ],
         },
         {
-          start: fadeOut,
+          start: 'self',
+          startOffset: '15%',
           duration: 500,
           animateWhenNotInViewport: true,
           properties: [
