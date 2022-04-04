@@ -56,7 +56,7 @@ const About: React.FC = () => {
 
   return (
     <>
-      <div className={styles.about}>
+      <div id="about" className={styles.about}>
         <Plx className={styles.photo} parallaxData={parallaxData}>
           <div>
             <img src="/forCV-cut-removebg-preview.png" alt="" />

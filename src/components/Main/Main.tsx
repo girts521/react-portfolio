@@ -23,7 +23,7 @@ const TypewriterHook = () => {
 
 const Main: React.FC = () => {
 
-    return <main className={styles.main}>
+    return <main id="home" className={styles.main}>
     <h1>I'm Girts Karcevskis</h1>
     <h2>and I'm a self-taught: </h2>
     <TypewriterHook />

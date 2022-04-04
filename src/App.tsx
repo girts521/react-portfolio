@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useRef} from "react";
 import "./reset.css";
 import styles from "./app.module.css";
 
@@ -67,6 +67,7 @@ const portfolio: ProjectProps = {
 
 
 const App: React.FC = () => {
+
   return (
     <div className={styles.container}>
       <Nav />

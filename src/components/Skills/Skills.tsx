@@ -56,7 +56,7 @@ const Skills = () => {
       ];
 
   return (
-    <div className={styles.container}>
+    <div id="skills" className={styles.container}>
      <Plx className={styles.skills} parallaxData={parallaxData}>
         <div className={styles.js}><img src="/js.png" alt="" /></div>
         <div className={styles.react}><img src="/react.png" alt="" /></div>

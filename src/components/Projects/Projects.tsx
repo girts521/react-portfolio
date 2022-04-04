@@ -91,7 +91,7 @@ const Projects: React.FC<{project:ProjectProps}> = (props) => {
 
 
   return (
-    <div className={styles.container}>
+    <div id="projects" className={styles.container}>
       <Plx className={styles.project} parallaxData={parallaxData}>
         <div className={styles.img}>
           <div className={styles.arrows}>

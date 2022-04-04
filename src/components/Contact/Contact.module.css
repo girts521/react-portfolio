@@ -60,3 +60,15 @@ button:hover{
     background-color: #000814;
     color: #a9d6e5;
 }
+
+.sent{
+    color: #a9d6e5;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.error {
+    color: red;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
