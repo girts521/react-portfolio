@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-import { Link } from "react-scroll";
 import styles from "./Contact.module.css";
 
 const Contact: React.FC = () => {
