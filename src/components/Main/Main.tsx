@@ -10,7 +10,6 @@ const TypewriterHook = () => {
     const { text } = useTypewriter({
       words: ['Frontend', 'Backend', 'React', 'Full stack', 'Web' ],
       loop: 0,
-      onLoopDone: () => console.log('done from typewriter hook')
     })
   
     return (

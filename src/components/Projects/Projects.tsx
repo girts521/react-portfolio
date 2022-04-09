@@ -18,12 +18,9 @@ const Projects: React.FC<{project:ProjectProps}> = (props) => {
   //state for imageIndex
   const [imageIndex, setImageIndex] = useState(0);
 
-  //array of images for projects
-  const images = ["/todo_main.png", "/todo_project.png", "/todo_login.png"];
-
   //change the image to the next one in the array
   const nextImage = () => {
-    if (imageIndex === images.length - 1) {
+    if (imageIndex === props.project.images.length - 1) {
       setImageIndex(0);
     } else {
       setImageIndex(imageIndex + 1);
@@ -33,7 +30,7 @@ const Projects: React.FC<{project:ProjectProps}> = (props) => {
   //change the image to the previous one in the array
     const prevImage = () => {
     if (imageIndex === 0) {
-      setImageIndex(images.length - 1);
+      setImageIndex(props.project.images.length - 1);
     } else {
       setImageIndex(imageIndex - 1);
     }

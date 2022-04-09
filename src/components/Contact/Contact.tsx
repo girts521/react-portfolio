@@ -15,7 +15,7 @@ const Contact: React.FC = () => {
   const sendData = async () => {
     const validEmail = validateEmail(emailRef.current!.value);
 
-    if (validEmail) {
+    if (validEmail  && messageRef.current!.value && nameRef.current!.value) {
       const data = {
         name: nameRef.current!.value,
         email: emailRef.current!.value,
@@ -66,7 +66,7 @@ const Contact: React.FC = () => {
         </p>
         {sent && <div className={styles.sent}> Message sent! Thank you :)</div>}
         {falseEmail && (
-          <div className={styles.error}> Please enter a valid email</div>
+          <div className={styles.error}> Please enter a valid email, name and text message!</div>
         )}
         <input ref={emailRef} type="email" placeholder="Enter your email" />
         <input ref={nameRef} type="text" placeholder="Enter your name" />
