@@ -25,7 +25,7 @@ const todo: ProjectProps = {
   github: "https://github.com/girts521/react-todoApp",
   website: "https://todo.gkarcevskis.com/",
   images: ["/todo_main.png", "/todo_project.png", "/todo_login.png"],
-  text: "Yes, this is another todo app. The internet must be full of different todo apps made by young learning developers. But in this project I tried to include a bit more than any of those tutorial based todo apps. The design is largely inspired by the Todoist app, which is my favorite todo app: https://todoist.com/ I tried to challenge myself and make this project as close to the todoist app as possible. It still certainly lacks some functionality, but if I could make my own todoist app then I would not be searching for a junior position...",
+  text: "Yes, this is another todo app. The internet must be full of different todo apps made by young learning developers. But in this project, I tried to include a bit more than any of those tutorial based todo apps. The design is largely inspired by the Todoist app, which is my favorite todo app: https://todoist.com/ I tried to challenge myself and make this project as close to the todoist app as possible. It still certainly lacks some functionality, but if I could make my own todoist app then I would not be searching for a junior position...",
 };
 
 const foodSearch: ProjectProps = {
@@ -34,7 +34,7 @@ const foodSearch: ProjectProps = {
   github: "https://github.com/girts521/food-search",
   website: "https://food-search.gkarcevskis.com/",
   images: ["/food-search-main.png", "/food-search-products.png", "/food-search-description.png", "/food-search-description2.png", "/food-search-search.png"],
-  text: "This is a react project with typescrpt. The main goal of the project was to fetch data from https://www.themealdb.com/, display it, and create a search functionality. The search is also implemented with a debounce function to increase the performance and not make unnecessary requests to the server.",
+  text: "This is a react project with typescript. The main goal of the project was to fetch data from https://www.themealdb.com/, display it, and create a search functionality. The search is also implemented with a debounce function to increase the performance and not make unnecessary requests to the server.",
 };
 
 const foodBlog: ProjectProps = {
@@ -43,7 +43,7 @@ const foodBlog: ProjectProps = {
   github: "https://github.com/girts521/react-todoApp",
   website: "https://food-blog.gkarcevskis.com/",
   images: ["/food-blog-main.png", "/food-blog-posts.png", "/food-blog-register.png", "/food-blog-404.png"],
-  text: "This was one of my first react projects. Thats why it is a rather small project which is using information from a publicly available api, which can be found here. It is showing different food categories with a short description and a photo. Besides that I am using formik for register and login form along with yup validation.",
+  text: "This was one of my first react projects. That's why it is a rather small project which is using information from a publicly available API, which can be found here. It is showing different food categories with a short description and a photo. Besides that, I am using formik for register and login form along with yup validation.",
 };
 
 const salaryCalculator: ProjectProps = {

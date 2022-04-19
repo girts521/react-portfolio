@@ -3,10 +3,9 @@ import styles from "./about.module.css";
 import Plx from "react-plx";
 
 const About: React.FC = () => {
-
   const parallaxData = [
     {
-      start: 'self',
+      start: "self",
       duration: 500,
       animateWhenNotInViewport: false,
       properties: [
@@ -25,12 +24,12 @@ const About: React.FC = () => {
           startValue: 0,
           endValue: 1,
           property: "opacity",
-        }
+        },
       ],
     },
     {
-      start: 'self',
-      startOffset: '30%',
+      start: "self",
+      startOffset: "30%",
       duration: 500,
       animateWhenNotInViewport: true,
       properties: [
@@ -49,7 +48,7 @@ const About: React.FC = () => {
           startValue: 1,
           endValue: 0,
           property: "opacity",
-        }
+        },
       ],
     },
   ];
@@ -66,9 +65,9 @@ const About: React.FC = () => {
           <div>
             <p>
               I am a self-taught web developer who is excited about learning
-              various frontend and backend technologies. After almoust two years
+              various frontend and backend technologies. After almost two years
               of spending all my free time studying, I am confident that I am
-              ready for the next chellange.
+              ready for the next challenge.
             </p>
           </div>
         </Plx>
