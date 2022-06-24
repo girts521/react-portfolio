@@ -64,6 +64,15 @@ const portfolio: ProjectProps = {
   text: "This is my portfolio website built with react and typescript. It also has a small api built with node and express, which is used to send emails from the contact form. I am using mailgun to send the emails to my email address. The animation of the home page is made with tsParticles.js, it was very interesting to play with it and there are so many different possibilities with it. The scroll animations are done with react-plx and react-scroll.",
 };
 
+const shop: ProjectProps = {
+  title: "Ecommerce website",
+  tech: [ 'React','styled components', 'Typescript','Redux', 'Node', 'Express', 'AWS', 'Nginx', 'PostgreSQL', 'Express session', 'Redis', 'passport.js auth' ],
+  github: "https://github.com/girts521/ecomm",
+  website: "https://shop.gkarcevskis.com/",
+  images: ["/shop2.png", "/shop1.png","shop3.png"],
+  text: "An ecommerce website with focus on functionality in frontend as well as backend. The frontend is built with react and typescript using a redux store. Both frontend and backend is hosted on AWS EC2 instance with Nginx reverse proxy and SSL certificate. Redis is used as a session store for user data, cart and auth. Auth is done with passport.js framework and is not required. This was a large project during which I learned a lot of new technologies and could implement them for the first time. ",
+};
+
 
 
 const App: React.FC = () => {
@@ -74,11 +83,10 @@ const App: React.FC = () => {
       <Main />
       <About />
       <Skills />
+      <Projects project={shop} />
       <Projects project={todo} />
-      <Projects project={foodSearch}/>
       <Projects project={portfolio}/>
-      <Projects project={foodBlog}/>
-      <Projects project={salaryCalculator}/>
+      <Projects project={foodSearch}/>
       <Contact />
     </div>
   );
